@@ -64,7 +64,7 @@ namespace DollarExchangeRateService.Persistence
         }
 
         private bool DateInAnalyzePeriod(DateTime date, int periods) =>
-            date >= DateTime.Now.AddDays(-periods + 1);
+            date >= DateTime.Now.AddDays(-periods);
 
         private ExchangeRateStatusType GetExchangeRateStatus(decimal averageForDay, decimal movingAverage)
         {
