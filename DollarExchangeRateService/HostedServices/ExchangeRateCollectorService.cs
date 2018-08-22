@@ -32,7 +32,7 @@ namespace DollarExchangeRateService.HostedServices
         {
             _logger.LogInformation("Starting");
             _timer = new Timer(DoWork, null, TimeSpan.Zero,
-                TimeSpan.FromSeconds(_appConfig.Value.DataCollectorIntervalInHours));
+                TimeSpan.FromHours(_appConfig.Value.DataCollectorIntervalInHours));
             return Task.CompletedTask;
         }
 
